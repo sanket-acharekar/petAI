@@ -4,9 +4,11 @@
 String typePrompt = "Select your favorite pet type using numbers below:\n";
 
 
-Console.WriteLine(typePrompt + "1. Cat \n2. Dog \n3. Rabbit");
-int petType = int.Parse(Console.ReadLine());
 String petTypeStr = "";
+do
+{
+    Console.WriteLine(typePrompt + "1. Cat \n2. Dog \n3. Rabbit");
+    int petType = int.Parse(Console.ReadLine());
 switch (petType)
 {
     case 1:
@@ -18,8 +20,12 @@ switch (petType)
     case 3:
         petTypeStr = "rabbit";
         break;
+        default:
+            Console.WriteLine("Please select a valid pet type");
+            break;
 }
 Console.WriteLine("\nUser input: " + petTypeStr);
+} while (petTypeStr == "");
 
 Console.WriteLine("\nWhat would you like to name your " +petTypeStr+ "?");
 string petName = Console.ReadLine();
