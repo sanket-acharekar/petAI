@@ -63,9 +63,15 @@ do
             break;
 
         case 2:
+            if(hunger > 7)
+            {
+                Console.WriteLine(petName + " is hungry and refusing to play. Please feed it");
+            } else
+            {
             happiness = happiness + 2;
             hunger = hunger + 1;
             Console.WriteLine("\nYou played with " + petName + ". " + petName + "'s Happiness increases and hunger slightly increases");
+            }
             break;
 
         case 3:
