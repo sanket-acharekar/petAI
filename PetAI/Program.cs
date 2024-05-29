@@ -99,5 +99,22 @@ do
     if (health > 10) health = 10;
     if (health < 1) health = 1;
 
+    if(health < 3)
+    {
+        Console.WriteLine("\n***** " + petName + "'s health is deteriorating. Please take care of your pet *****");
+    }
+    if (happiness <= 3)
+    {
+        Console.WriteLine("\n***** " + petName + " is getting sad. Please play with it. *****");
+    }
+    if (hunger > 8)
+    {
+        Console.WriteLine("\n***** " + petName + " is hungry. Please feed it. *****");
+    }
+    if(health > 7 && hunger < 3 && happiness > 7)
+    {
+        Console.WriteLine("\n ***** You are taking good care of " + petName + ". Good job!!! *****");
+    }
+
     //Console.WriteLine("\n"+ hunger +" " + happiness +" "+ health);
 } while (mainMenuSelection != 5);
