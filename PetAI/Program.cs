@@ -35,6 +35,8 @@ int mainMenuSelection = 1;
 
 do
 {
+    if(mainMenuSelection > 0 && mainMenuSelection < 6)
+{
     Console.WriteLine("\nMain Menu \n" +
         "1. Feed " + petName + "\n" +
         "2. Play with " + petName + "\n" +
@@ -42,6 +44,7 @@ do
         "4. Check " + petName + "'s status \n" +
         "5. Exit \n" +
         "Please select a menu");
+    }
     mainMenuSelection = int.Parse(Console.ReadLine());
     Console.WriteLine("\nUser input: " + mainMenuSelection);
 
@@ -72,6 +75,9 @@ do
             break;
 
         case 5:
+            break;
+        default:
+            Console.WriteLine("Entered selection is not supported. Please select an action from above given list");
             break;
     }
 
