@@ -90,5 +90,14 @@ do
             break;
     }
 
+    if (hunger > 10) hunger = 10;
+    if (hunger < 1) hunger = 1;
+
+    if (happiness > 10) happiness = 10;
+    if (happiness < 1) happiness = 1;
+
+    if (health > 10) health = 10;
+    if (health < 1) health = 1;
+
     //Console.WriteLine("\n"+ hunger +" " + happiness +" "+ health);
 } while (mainMenuSelection != 5);
