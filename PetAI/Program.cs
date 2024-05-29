@@ -71,10 +71,13 @@ do
         case 3:
             health = health + 2;
             happiness = happiness - 1;
+            hunger = hunger + 1;
             Console.WriteLine("\n"+ petName + " has rested. " + petName + "'s health is improved but " + petName + " is a bit gloomy.");
             break;
 
         case 4:
+            hunger = hunger + 1;
+            happiness = happiness - 1;
             Console.WriteLine("\n"+ petName + " status : \n Health : " + health + "" +
                 "\n Happiness : " + happiness + "" +
                 "\n Hunger : " + hunger);
